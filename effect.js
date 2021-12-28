@@ -210,16 +210,17 @@ $("document").ready(function () {
     function msgLoop(i) {
       $("p:nth-child(" + i + ")")
         .fadeOut("slow")
-        .delay(800)
+        .delay(50)
         .promise()
         .done(function () {
           i = i + 1;
           $("p:nth-child(" + i + ")")
             .fadeIn("slow")
-            .delay(1400);
+            .delay(50);
           if (i == 24) {
             $("p:nth-child(23)")
               .fadeOut("slow")
+              .delay(2000)
               .promise()
               .done(function () {
                 $(".cake").fadeIn("fast");
