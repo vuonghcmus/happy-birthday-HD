@@ -158,6 +158,7 @@ $("document").ready(function () {
     $(".fuego").fadeIn("slow");
     $(this)
       .fadeOut("slow")
+      .delay(1500)
       .promise()
       .done(function () {
         $("#wish_message").fadeIn("slow");
@@ -215,9 +216,9 @@ $("document").ready(function () {
           i = i + 1;
           $("p:nth-child(" + i + ")")
             .fadeIn("slow")
-            .delay(1000);
-          if (i == 50) {
-            $("p:nth-child(49)")
+            .delay(1400);
+          if (i == 24) {
+            $("p:nth-child(23)")
               .fadeOut("slow")
               .promise()
               .done(function () {
