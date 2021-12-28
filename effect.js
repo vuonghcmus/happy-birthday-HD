@@ -222,7 +222,7 @@ $("document").ready(function () {
               .fadeOut("slow")
               .promise()
               .done(function () {
-                $(".cake").fadeIn("fast").delay(2000);
+                $(".cake").fadeIn("fast");
               });
           } else {
             msgLoop(i);
