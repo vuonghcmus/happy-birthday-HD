@@ -210,22 +210,19 @@ $("document").ready(function () {
     function msgLoop(i) {
       $("p:nth-child(" + i + ")")
         .fadeOut("slow")
-        .delay(50)
+        .delay(800)
         .promise()
         .done(function () {
-          i = i + 1;
-          $("p:nth-child(" + i + ")")
-            .fadeIn("slow")
-            .delay(50);
+          i++;
           if (i == 24) {
-            $("p:nth-child(23)")
-              .fadeOut("slow")
-              .promise()
-              .done(function () {
-                $(".cake").fadeIn("fast");
-              });
+            $("p:nth-child(24)").addClass("wish-message");
+            $(".cake").fadeIn("fast");
+            return;
           } else {
-            msgLoop(i);
+            $("p:nth-child(" + i + ")")
+              .fadeIn("slow")
+              .delay(1400);
+            return msgLoop(i);
           }
         });
       // body...
