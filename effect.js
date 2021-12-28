@@ -220,10 +220,9 @@ $("document").ready(function () {
           if (i == 24) {
             $("p:nth-child(23)")
               .fadeOut("slow")
-              .delay(2000)
               .promise()
               .done(function () {
-                $(".cake").fadeIn("fast");
+                $(".cake").fadeIn("fast").delay(2000);
               });
           } else {
             msgLoop(i);
